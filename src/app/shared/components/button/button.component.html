@@ -1,0 +1,9 @@
+<div
+  class="c-btn"
+  [ngClass]="[
+    style ? 'c-btn--style-' + style : '',
+    size ? 'c-btn--size-' + size : ''
+  ]"
+>
+  <ng-content></ng-content>
+</div>

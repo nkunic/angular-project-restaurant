@@ -1,0 +1,19 @@
+<div class="menu">
+  <div class="menu__header">
+    <div class="menu__label">
+      <strong>Menu</strong>
+    </div>
+    <div class="menu__icon" (click)="openMenu()">
+      <fa-icon [icon]="menuOpened ? faAngleUp : faAngleDown"> </fa-icon>
+    </div>
+  </div>
+  <div class="menu__content" *ngIf="menuOpened === true">
+    <div class="menu__item" *ngFor="let item of menu">
+      <app-item
+        [id]="item.id"
+        [name]="item.name"
+        [price]="item.price"
+      ></app-item>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+@import '../../../../scss/mixins/text';
+
+.waiter {
+  border: {
+    width: 1px;
+    style: solid;
+    color: var(--color-secondary);
+    radius: 0.1875rem;
+  }
+  width: 25rem;
+
+  .waiter__header {
+    display: flex;
+    align-items: center;
+    padding: 0.3125rem 0.625rem;
+    background-color: var(--color-secondary);
+
+    .waiter__id {
+      @include text(var(--color-white), var(--font-body), 1rem, 1, 600, none);
+    }
+    .waiter__id + .waiter__name {
+      margin-left: 0.3125rem;
+    }
+    .waiter__name {
+      @include text(
+        var(--color-white),
+        var(--font-body),
+        0.875rem,
+        1,
+        normal,
+        none
+      );
+    }
+  }
+
+  .waiter__content {
+    padding: 0.625rem;
+    .label {
+      @include text(
+        var(--color-black),
+        var(--font-body),
+        0.875rem,
+        1,
+        600,
+        none
+      );
+    }
+    .value {
+      @include text(
+        var(--color-black),
+        var(--font-body),
+        0.875rem,
+        1,
+        400,
+        none
+      );
+    }
+  }
+}

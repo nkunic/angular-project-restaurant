@@ -1,0 +1,34 @@
+<app-content>
+  <div class="homepage">
+    <div class="homepage__title">
+      <app-title [alignment]="'center'" [color]="'primary'" [size]="'large'">
+        Restaurant
+      </app-title>
+    </div>
+
+    <div class="homepage__buttons">
+      <div class="homepage__button">
+        <app-button
+          [style]="'primary'"
+          [size]="'large'"
+          routerLink="/tables"
+        >
+          Tables
+        </app-button>
+      </div>
+      <div class="homepage__button">
+        <app-button
+          [style]="'secondary'"
+          [size]="'large'"
+          routerLink="/waiters"
+        >
+          Waiters
+        </app-button>
+      </div>
+    </div>
+
+    <div class="homepage__content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</app-content>

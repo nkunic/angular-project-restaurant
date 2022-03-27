@@ -1,0 +1,85 @@
+@import '../../../../scss/mixins/text';
+
+.table {
+  border: {
+    width: 1px;
+    style: solid;
+    color: var(--color-primary);
+    radius: 0.3125rem;
+  }
+  width: 25rem;
+
+  .table__header {
+    display: flex;
+    align-items: center;
+    padding: 0.3125rem 0.625rem;
+    background-color: var(--color-primary);
+
+    .table__id {
+      @include text(var(--color-white), var(--font-body), 1rem, 1, 600, none);
+    }
+    .table__id + .table__flag {
+      margin-left: 0.3125rem;
+    }
+
+    .table__flag {
+      @include text(var(--color-alert), var(--font-body), 1rem, 1, 600, none);
+    }
+
+    .table__icon {
+      margin-left: auto;
+      color: var(--color-white);
+      cursor: pointer;
+    }
+  }
+
+  .table__content {
+    padding: {
+      top: 0.625rem;
+      right: 0.625rem;
+      left: 0.625rem;
+    }
+
+    .table__item {
+      display: flex;
+      align-items: center;
+      .label {
+        @include text(
+          var(--color-black),
+          var(--font-body),
+          0.875rem,
+          1,
+          600,
+          none
+        );
+      }
+      .value {
+        @include text(
+          var(--color-black),
+          var(--font-body),
+          0.875rem,
+          1,
+          400,
+          none
+        );
+      }
+      .label + input {
+        margin-left: 0.3125rem;
+      }
+      input {
+        flex: 1;
+      }
+    }
+
+    .table__item + .table__item {
+      margin-top: 0.625rem;
+    }
+  }
+
+  .table__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.625rem;
+  }
+}

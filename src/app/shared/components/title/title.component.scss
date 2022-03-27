@@ -1,0 +1,41 @@
+.c-title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+// Alignment
+.c-title--alignment-left {
+  text-align: left;
+}
+.c-title--alignment-center {
+  text-align: center;
+}
+.c-title--alignment-right {
+  text-align: right;
+}
+
+// Color
+.c-title--color-light {
+  color: var(--color-white);
+}
+.c-title--color-dark {
+  color: var(--color-black);
+}
+.c-title--color-primary {
+  color: var(--color-primary);
+}
+.c-title--color-secondary {
+  color: var(--color-secondary);
+}
+
+// Size
+.c-title--size-small {
+  font-size: 0.875rem;
+}
+.c-title--size-medium {
+  font-size: 1.25rem;
+}
+.c-title--size-large {
+  font-size: 1.5rem;
+}

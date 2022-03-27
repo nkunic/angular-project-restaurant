@@ -1,0 +1,82 @@
+@import '../../../../scss/mixins/buttons';
+
+.c-btn {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all, 0.3s, linear;
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  &:focus {
+    &:active {
+      outline: 0;
+    }
+  }
+}
+
+// Style
+.c-btn--style-primary {
+  @include button-style(
+    var(--font-body),
+    1,
+    500,
+    center,
+    none,
+    var(--color-white),
+    var(--color-primary),
+    0,
+    transparent,
+    0.1875rem,
+    var(--color-white),
+    var(--color-primary-d-10),
+    transparent,
+    var(--color-white),
+    var(--color-primary-l-10),
+    transparent,
+    var(--color-white),
+    var(--color-primary-l-10),
+    transparent
+  );
+}
+
+.c-btn--style-secondary {
+  @include button-style(
+    var(--font-body),
+    1,
+    500,
+    center,
+    none,
+    var(--color-white),
+    var(--color-secondary),
+    0,
+    transparent,
+    0.1875rem,
+    var(--color-white),
+    var(--color-secondary-d-10),
+    transparent,
+    var(--color-white),
+    var(--color-secondary-l-10),
+    transparent,
+    var(--color-white),
+    var(--color-secondary-l-10),
+    transparent
+  );
+}
+
+// Size
+.c-btn--size-small {
+  @include button-size(0.75rem, 0.5rem, 2rem);
+}
+.c-btn--size-medium {
+  @include button-size(0.75rem, 0.625rem, 0.625rem);
+}
+.c-btn--size-large {
+  @include button-size(1rem, 0.625rem, 1.5rem);
+}

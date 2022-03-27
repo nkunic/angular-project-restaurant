@@ -1,0 +1,11 @@
+<div class="waiters">
+  <div class="waiters__item" *ngFor="let waiter of waiters">
+    <app-waiter
+      [id]="waiter.id"
+      [name]="waiter.name"
+      [tableFirst]="waiter.tableFirst"
+      [tableSecond]="waiter.tableSecond"
+    >
+    </app-waiter>
+  </div>
+</div>

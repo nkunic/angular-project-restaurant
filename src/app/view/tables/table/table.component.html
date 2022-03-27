@@ -1,0 +1,31 @@
+<div class="table">
+  <div class="table__header">
+    <div class="table__id">
+      <strong>Table {{ id }}:</strong>
+    </div>
+    <div class="table__flag" *ngIf="orderPlaced === true">
+      <strong>Ordered!</strong>
+    </div>
+    <div class="table__icon" (click)="openTable()">
+      <fa-icon [icon]="tableOpened ? faAngleUp : faAngleDown"> </fa-icon>
+    </div>
+  </div>
+  <ng-container *ngIf="tableOpened === true">
+    <div class="table__content">
+      <div class="table__item">
+        <span class="label">Order {{ id }}:</span>
+        <input
+          type="text"
+          [(ngModel)]="order"
+          value="{{ order }}"
+          placeholder="Order {{ id }}"
+        />
+      </div>
+    </div>
+    <div class="table__footer">
+      <app-button [style]="'primary'" [size]="'small'" (click)="makeOrder()">
+        Order</app-button
+      >
+    </div>
+  </ng-container>
+</div>

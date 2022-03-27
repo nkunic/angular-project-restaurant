@@ -1,0 +1,9 @@
+.menu + .tables {
+  margin-top: 2rem;
+}
+
+.tables {
+  .tables__item + .tables__item {
+    margin-top: 1rem;
+  }
+}

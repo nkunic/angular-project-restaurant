@@ -1,0 +1,9 @@
+<div class="menu">
+  <app-menu></app-menu>
+</div>
+
+<div class="tables">
+  <div class="tables__item" *ngFor="let table of tables">
+    <app-table [id]="table.id" [order]="table.order"> </app-table>
+  </div>
+</div>

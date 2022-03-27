@@ -1,0 +1,33 @@
+.menu {
+  border: {
+    width: 1px;
+    style: solid;
+    color: var(--color-tertiary);
+    radius: 0.1875rem;
+  }
+
+  .menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3125rem 0.625rem;
+    color: var(--color-white);
+    background-color: var(--color-tertiary);
+
+    .menu__label + .menu__icon {
+      margin-left: 0.5rem;
+    }
+
+    .menu__icon {
+      cursor: pointer;
+    }
+  }
+
+  .menu__content {
+    padding: 0.3125rem;
+
+    .menu__item + .menu__item {
+      margin-top: 0.3125rem;
+    }
+  }
+}
